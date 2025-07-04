@@ -1,11 +1,17 @@
+import Hero from '../components/Home/Hero';
+// Una vez que hagamos estas, podés descomentar las siguientes líneas:
+// import Beneficios from '../components/Home/Beneficios';
+// import ProductosDestacados from '../components/Home/ProductosDestacados';
+// import FormularioContacto from '../components/Home/FormularioContacto';
+
 function Home() {
   return (
-    <div className="page-container">
-      <h1>Inicio</h1>
-      <p>Esta es la landing principal.</p>
-            <p>que onda putita.</p>
-
-    </div>
+    <>
+      <Hero />
+      {/* <Beneficios /> */}
+      {/* <ProductosDestacados /> */}
+      {/* <FormularioContacto /> */}
+    </>
   );
 }
 

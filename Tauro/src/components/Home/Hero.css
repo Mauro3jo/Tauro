@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../assets/Mask group.png');
+  background-size: cover; /* permite zoom */
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Imagen "Elegí CALIDAD" */
+.hero-title-img {
+  position: absolute;
+  top: 30%;
+  left: 28vw; /* más a la derecha */
+  width: clamp(200px, 28vw, 420px);
+  max-width: 90%;
+  z-index: 2;
+}
+
+/* Texto descriptivo */
+.hero-subtitle {
+  position: absolute;
+  top: 38%;
+  left: 28vw; /* mismo margen que el título */
+  width: clamp(280px, 35vw, 580px);
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(14px, 1.2vw, 24px);
+  line-height: 1.4;
+  color: #1B1B1B;
+
+  z-index: 2;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* ✅ Estilos para móvil */
+@media (max-width: 768px) {
+  .hero-title-img {
+    top: 26vh;
+    left: 15vw;
+    width: 70vw;
+  }
+
+  .hero-subtitle {
+    top: 38vh;
+    left: 15vw;
+    width: 80vw;
+    font-size: 16px;
+    text-align: left;
+  }
+}
