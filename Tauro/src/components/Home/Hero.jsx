@@ -4,7 +4,8 @@ import titulo from '../../assets/Elegí Calidad.png';
 
 function Hero() {
   return (
-    <section className="hero" style={{ backgroundImage: `url(${fondo})` }}>
+    <section className="hero">
+      <img src={fondo} alt="Fondo" className="hero-bg" />
       <img src={titulo} alt="Elegí Calidad" className="hero-title-img" />
       <p className="hero-subtitle">
         Nuestros neumáticos de alta calidad te ofrecen un agarre excepcional y la<br />

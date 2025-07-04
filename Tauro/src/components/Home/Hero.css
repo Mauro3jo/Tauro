@@ -1,18 +1,27 @@
 .hero {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  background-image: url('../../assets/Mask group.png');
-  background-size: cover; /* permite zoom */
-  background-position: center;
+  height: 75vh; /* Altura menor para evitar espacio extra */
   overflow: hidden;
+  z-index: 1;
+}
+
+/* Imagen de fondo recortada */
+.hero-bg {
+  position: absolute;
+  top: -15%;   /* Recorta 15% de la parte superior */
+  left: -5%;   /* Recorta 5% de cada lado */
+  width: 110%; /* Aumenta para compensar el recorte */
+  min-height: 130%; /* Garantiza que cubra toda el área */
+  object-fit: cover;
+  z-index: 0;
 }
 
 /* Imagen "Elegí CALIDAD" */
 .hero-title-img {
   position: absolute;
   top: 30%;
-  left: 28vw; /* más a la derecha */
+  left: 28vw;
   width: clamp(200px, 28vw, 420px);
   max-width: 90%;
   z-index: 2;
@@ -22,7 +31,7 @@
 .hero-subtitle {
   position: absolute;
   top: 38%;
-  left: 28vw; /* mismo margen que el título */
+  left: 28vw;
   width: clamp(280px, 35vw, 580px);
 
   font-family: 'Montserrat', sans-serif;
@@ -39,6 +48,10 @@
 
 /* ✅ Estilos para móvil */
 @media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
   .hero-title-img {
     top: 26vh;
     left: 15vw;
