@@ -1,9 +1,14 @@
 .footer {
   background-color: #0d0d0d;
-  padding: 40px 20px 20px;
+  padding: 70px 20px 20px;    /* ¡Que sea al menos el alto del botón! */
   color: white;
   border-top: 5px solid #7EC144;
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
 }
+
+
 
 .footer-container {
   display: flex;

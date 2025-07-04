@@ -1,0 +1,290 @@
+.destacados {
+  background: #1B1B1B;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 100px;  /* padding-bottom suficiente, 100px o más */
+  position: relative;
+  overflow: visible !important;   /* ¡ESTO ES LO CLAVE! */
+  z-index: 1;
+}
+
+
+
+.destacados::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 20px;
+  background: linear-gradient(to right, transparent 0%, #E63839 100%);
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.destacados::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 20px;
+  background: linear-gradient(to left, transparent 0%, #E63839 100%);
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.fondo-izquierda,
+.fondo-derecha {
+  position: absolute;
+  width: 600px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fondo-izquierda {
+  top: 0;
+  left: 0;
+}
+
+.fondo-derecha {
+  bottom: 0;
+  right: 0;
+}
+
+.titulo {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+/* Más espacio para las flechas */
+.carrusel-outer {
+  position: relative;
+  width: 800px; /* más ancho */
+  max-width: 98vw;
+  min-height: 260px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+}
+
+/* Flechas bien afuera */
+.nav-btn {
+  background: none;
+  border: 2px solid red;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: red;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.nav-btn-left {
+  left: -120px; /* separación muy clara */
+}
+
+.nav-btn-right {
+  right: -120px;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.item {
+  flex-shrink: 0;
+  width: 180px;
+  height: 260px;
+  border-radius: 20px;
+  background: #eee;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 4px solid transparent;
+  transition: all 0.5s cubic-bezier(.4,2,.4,1), opacity 0.5s;
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.85);
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+
+.item.activo {
+  transform: scale(1);
+  border-color: red;
+  opacity: 1;
+  z-index: 3;
+}
+
+.item.left, .item.right {
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.item.left {
+  transform: translateX(-50%) scale(0.85);
+}
+
+.item.right {
+  transform: translateX(50%) scale(0.85);
+}
+
+.item.hidden {
+  display: none !important;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.nombre-central {
+  color: #fff;
+  font-weight: bold;
+  font-size: 19px;
+  letter-spacing: 1px;
+  background: rgba(27,27,27,0.9);
+  border-radius: 0 0 20px 20px;
+  width: 220px;
+  margin: 18px auto 0 auto;
+  padding: 7px 0 5px 0;
+  box-shadow: 0 2px 8px #00000030;
+  position: relative;
+  z-index: 4;
+}
+
+.indicadores {
+  margin: 24px 0 60px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+  position: relative;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gray;
+}
+
+.punto.activo {
+  background: red;
+}
+
+/* --- BOTÓN FLOTANTE CORRECTO --- */
+.btn-saber-mas {
+   position: absolute;
+  bottom: -25px;    /* O la distancia que prefieras */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999 !important; /* Máximo posible */
+  padding: 12px 32px;
+  background: white;
+  border-radius: 30px;
+  color: #1B1B1B;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 100 !important; /* ahora sí, SIEMPRE arriba */
+  pointer-events: auto;
+}
+
+.btn-saber-mas:hover {
+  background: #ddd;
+}
+
+@media (max-width: 1100px) {
+  .carrusel-outer {
+    width: 99vw;
+    min-width: 0;
+  }
+  .nav-btn-left {
+    left: 0;
+  }
+  .nav-btn-right {
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .carrusel-outer {
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  .carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0;
+  }
+  .nav-btn {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    margin: 0;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+  .item {
+    width: 180px;
+    height: 240px;
+    max-width: 80vw;
+    max-height: 60vw;
+    margin: 0 6px;
+    transform: scale(1);
+    opacity: 1;
+    flex-shrink: 0;
+  }
+  .item:not(.activo) {
+    display: none !important;
+  }
+  .nombre-central {
+    font-size: 15px;
+    width: 90vw;
+    min-width: 150px;
+    max-width: 240px;
+    padding: 7px 0 5px 0;
+    margin: 12px auto 0 auto;
+  }
+}
+
+/* --- ESTE FIX GARANTIZA QUE JAMÁS SE CORTE EL BOTÓN, SIN TOCAR TU DISEÑO --- */
+.footer,
+.formularioContacto {
+  overflow: visible !important;
+  z-index: 1 !important;
+}

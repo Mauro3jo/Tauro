@@ -1,65 +1,59 @@
 .hero {
   position: relative;
   width: 100vw;
-  height: 75vh; /* Altura menor para evitar espacio extra */
+  height: 65vh;
   overflow: hidden;
   z-index: 1;
 }
 
-/* Imagen de fondo recortada */
 .hero-bg {
   position: absolute;
-  top: -15%;   /* Recorta 15% de la parte superior */
-  left: -5%;   /* Recorta 5% de cada lado */
-  width: 110%; /* Aumenta para compensar el recorte */
-  min-height: 130%; /* Garantiza que cubra toda el área */
+  top: -15%;
+  left: -5%;
+  width: 110%;
+  min-height: 125%;
   object-fit: cover;
   z-index: 0;
 }
 
-/* Imagen "Elegí CALIDAD" */
 .hero-title-img {
   position: absolute;
-  top: 30%;
+  top: 50%; /* 🔽 Bajalo más aumentando este valor */
   left: 28vw;
   width: clamp(200px, 28vw, 420px);
   max-width: 90%;
   z-index: 2;
 }
 
-/* Texto descriptivo */
 .hero-subtitle {
   position: absolute;
-  top: 38%;
+  top: 60%; /* 🔽 Bajalo más aumentando este valor */
   left: 28vw;
   width: clamp(280px, 35vw, 580px);
-
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: clamp(14px, 1.2vw, 24px);
   line-height: 1.4;
   color: #1B1B1B;
-
   z-index: 2;
   text-align: left;
   margin-top: 0;
 }
 
-/* ✅ Estilos para móvil */
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 50vh;
   }
 
   .hero-title-img {
-    top: 26vh;
+    top: 28vh; /* 🔽 Mismo concepto para móvil */
     left: 15vw;
     width: 70vw;
   }
 
   .hero-subtitle {
-    top: 38vh;
+    top: 39vh; /* 🔽 Mismo concepto para móvil */
     left: 15vw;
     width: 80vw;
     font-size: 16px;
