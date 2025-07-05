@@ -1,12 +1,12 @@
 import HeroProductos from '../components/Productos/HeroProductos';
-// import CalidadGarantizada from '../components/Productos/CalidadGarantizada';
+ import CalidadGarantizada from '../components/Productos/CalidadGarantizada';
 // import ProductosPremiumGrid from '../components/Productos/ProductosPremiumGrid';
 
 function Productos() {
   return (
     <>
       <HeroProductos />
-      {/* <CalidadGarantizada /> */}
+       <CalidadGarantizada />
       {/* <ProductosPremiumGrid /> */}
     </>
   );
