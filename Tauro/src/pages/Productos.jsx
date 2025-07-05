@@ -1,9 +1,14 @@
+import HeroProductos from '../components/Productos/HeroProductos';
+// import CalidadGarantizada from '../components/Productos/CalidadGarantizada';
+// import ProductosPremiumGrid from '../components/Productos/ProductosPremiumGrid';
+
 function Productos() {
   return (
-    <div>
-      <h1>Productos</h1>
-      <p>Listado de neumáticos u otros productos.</p>
-    </div>
+    <>
+      <HeroProductos />
+      {/* <CalidadGarantizada /> */}
+      {/* <ProductosPremiumGrid /> */}
+    </>
   );
 }
 
