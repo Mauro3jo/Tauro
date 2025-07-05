@@ -1,5 +1,5 @@
+// ProductosDestacados.jsx
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './ProductosDestacados.css';
 
 import HDMA05 from '../../assets/HDMA05.png';
@@ -25,7 +25,6 @@ function getOrder(center, total) {
 function ProductosDestacados() {
   const [center, setCenter] = useState(0);
   const intervalRef = useRef(null);
-  const navigate = useNavigate();
 
   const resetInterval = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -80,10 +79,7 @@ function ProductosDestacados() {
           <span key={i} className={`punto ${i === center ? 'activo' : ''}`} />
         ))}
       </div>
-      {/* El botón va último para que siempre quede arriba */}
-      <button className="btn-saber-mas" style={{zIndex: 100}} onClick={() => navigate('/productos')}>
-        Saber más
-      </button>
+      {/* ¡Botón eliminado! */}
     </section>
   );
 }
