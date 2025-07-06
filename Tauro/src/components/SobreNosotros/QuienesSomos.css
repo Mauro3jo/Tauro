@@ -1,0 +1,142 @@
+.quienes-somos-section {
+  position: relative;
+  width: 100vw;
+  min-width: 320px;
+  min-height: 520px;
+  background: #D4D6DB;  /* <-- Gris más oscuro */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.quienes-somos-bg {
+  position: relative;
+  width: 100vw;
+  min-height: 520px;
+  height: 100%;
+}
+
+.moto-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  min-width: 320px;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.franja-verde {
+  position: absolute;
+  top: -80px;
+  left: 25vw;
+  width: 50vw;
+  min-width: 120px;
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+  max-width: none;
+}
+
+.toro-bg {
+  position: absolute;
+  left: 16px;
+  top: 36px;
+  width: 260px;
+  filter: brightness(20) saturate(5); /* súper blanco */
+  opacity: 0.18;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.quienes-somos-content {
+  position: relative;
+  z-index: 5;
+  padding: 72px 0 56px 80px;   /* más espacio arriba y abajo */
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;                      /* El espaciado lo controlamos abajo */
+}
+
+.quienes-somos-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: #191919;
+  position: relative;
+  z-index: 6;
+}
+
+.quienes-somos-content .primer-parrafo {
+  margin-bottom: 34px;   /* Más espacio abajo del primero */
+  font-size: 1.18rem;
+  color: #222;
+  line-height: 1.6;
+}
+
+.quienes-somos-content p {
+  font-size: 1.18rem;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.quienes-somos-content p + p {
+  margin-top: 14px;   /* Espacio solo entre los otros dos */
+}
+
+.quienes-somos-content b {
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+/* Responsive tablet */
+@media (max-width: 1050px) {
+  .quienes-somos-content {
+    padding: 40px 24px 40px 24px; /* padding en ambos laterales */
+    max-width: 98vw;
+    box-sizing: border-box;
+  }
+  .toro-bg {
+    width: 130px;
+    left: 8px;
+    top: 34px;
+  }
+  .franja-verde {
+    top: -60px;
+    left: 60vw;
+    width: 38vw;
+    min-width: 64px;
+    height: auto;
+  }
+  .moto-img {
+    width: 100vw;
+    min-width: 240px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .quienes-somos-section,
+  .quienes-somos-bg {
+    min-height: 370px;
+    width: 100vw;
+    padding: 0;
+  }
+  .quienes-somos-content {
+    padding: 28px 16px 32px 16px;
+    text-align: left;
+    max-width: 430px;
+    margin: 0 auto;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+  .toro-bg,
+  .moto-img,
+  .franja-verde {
+    display: none;
+  }
+}
+
