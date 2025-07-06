@@ -1,0 +1,149 @@
+.vision-section {
+  width: 100vw;
+  min-width: 320px;
+  background: #D4D6DB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0 24px 0;
+}
+
+.vision-card {
+  position: relative;
+  width: 99vw;
+  max-width: 1500px;
+  min-width: 300px;
+  background: #191919;
+  border-radius: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.16);
+  min-height: 520px;
+  flex-direction: row-reverse; /* INVERTIDO respecto a misión */
+}
+
+.vision-card-content {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 0%;
+  padding: 54px 64px 54px 420px; /* Padding a la IZQUIERDA (toro), no invade el toro */
+  color: #fff;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-break: break-word;
+}
+
+.vision-card-content h3 {
+  color: #55A333;
+  font-size: 2rem;
+  margin-bottom: 38px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.vision-card-content b {
+  font-weight: 700;
+}
+
+.vision-card-content .destacado {
+  color: #55A333;
+  font-weight: 600;
+}
+
+.vision-card-content p {
+  font-size: 1.13rem;
+  color: #fff;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+/* --- TORO VERDE --- */
+.toro-vision {
+  position: absolute;
+  left: 56px;
+  top: 35%;
+  transform: translateY(-20%);
+  width: 325px;
+  height: auto;
+  z-index: 1;
+  opacity: 0.40; /* Resalta como el rojo */
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(65deg) drop-shadow(0 0 0 #55A333) brightness(2.5);
+  /* Ajuste para el verde fuerte sobre negro */
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Degradado MUY fino arriba a la izquierda */
+.degradado-verde {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 68%;
+  height: 12px;
+  background: linear-gradient(to right, #55A333 0%, #191919 70%);
+  z-index: 3;
+  opacity: 1;
+  border-top-left-radius: 60px;
+}
+
+@media (max-width: 1200px) {
+  .vision-card-content {
+    padding: 38px 32px 38px 280px;
+  }
+  .toro-vision {
+    width: 170px;
+    left: 14px;
+    top: 38%;
+  }
+  .degradado-verde {
+    height: 9px;
+  }
+}
+
+@media (max-width: 900px) {
+  .vision-card {
+    width: 96vw;
+    max-width: 99vw;
+  }
+  .vision-card-content {
+    padding: 26px 18px 28px 120px;
+  }
+  .toro-vision {
+    width: 110px;
+    left: 6px;
+    top: 44%;
+  }
+  .degradado-verde {
+    height: 7px;
+  }
+}
+
+@media (max-width: 700px) {
+  .vision-section {
+    padding: 12px 0 10px 0;
+  }
+  .vision-card {
+    width: 99vw;
+    min-width: 0;
+    border-radius: 28px;
+  }
+  .vision-card-content {
+    padding: 20px 10px 20px 18px;
+    font-size: 0.97rem;
+  }
+  .toro-vision {
+    width: 60px;
+    left: 3px;
+    top: 44%;
+    opacity: 0.23;
+  }
+  .degradado-verde {
+    height: 5px;
+    width: 85%;
+    border-top-left-radius: 28px;
+  }
+}
