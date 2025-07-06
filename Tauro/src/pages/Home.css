@@ -1,0 +1,41 @@
+.puente-boton-outer {
+  position: relative;
+}
+
+.puente-boton {
+  position: absolute;
+  left: 50%;
+  bottom: -42px; /* Mitad del alto del botón */
+  transform: translateX(-50%);
+  width: 180px;
+  height: 84px;
+  background: #FFF;
+  color: #111;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.18rem;
+  border: none;
+  border-radius: 42px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  z-index: 2000;
+}
+
+.puente-boton:hover {
+  box-shadow: 0 12px 36px rgba(0,0,0,0.20);
+  filter: brightness(0.97);
+}
+
+@media (max-width: 600px) {
+  .puente-boton {
+    width: 120px;
+    height: 56px;
+    font-size: 1rem;
+    border-radius: 28px;
+    bottom: -28px;
+  }
+}
