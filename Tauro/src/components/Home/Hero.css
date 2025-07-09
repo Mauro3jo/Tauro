@@ -4,6 +4,7 @@
   height: 65vh;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
 }
 
 .hero-bg {
@@ -18,7 +19,7 @@
 
 .hero-title-img {
   position: absolute;
-  top: 50%; /* 🔽 Bajalo más aumentando este valor */
+  top: 50%;
   left: 28vw;
   width: clamp(200px, 28vw, 420px);
   max-width: 90%;
@@ -27,7 +28,7 @@
 
 .hero-subtitle {
   position: absolute;
-  top: 60%; /* 🔽 Bajalo más aumentando este valor */
+  top: 60%;
   left: 28vw;
   width: clamp(280px, 35vw, 580px);
   font-family: 'Montserrat', sans-serif;
@@ -41,22 +42,62 @@
   margin-top: 0;
 }
 
+/* --- FADE IN UP MUY GRADUAL --- */
+.toro-izquierda,
+.toro-derecha {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 5s cubic-bezier(.55,0,.1,1),
+    transform 2.5s cubic-bezier(.6, .05, .21, .98);
+}
+
+/* Toro blanco: AÚN MÁS GRANDE */
+.toro-izquierda {
+  left: 7vw;
+  top: 30%;
+  width: clamp(120px, 22vw, 320px);
+  transform: translateY(40px) translateY(-50%);
+}
+
+.toro-derecha {
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-height: 65vh;
+  width: auto;
+  max-width: 45vw;
+  object-fit: contain;
+}
+
+/* Cuando aparece: opacidad 0.93 y sube a su lugar */
+.fade-in-up {
+  opacity: 0.93;
+  transform: translateY(0);
+}
+
+/* Responsive (Mobile) - Ambos toros SIEMPRE ocultos */
 @media (max-width: 768px) {
   .hero {
     height: 50vh;
   }
-
   .hero-title-img {
-    top: 28vh; /* 🔽 Mismo concepto para móvil */
+    top: 28vh;
     left: 15vw;
     width: 70vw;
   }
-
   .hero-subtitle {
-    top: 39vh; /* 🔽 Mismo concepto para móvil */
+    top: 39vh;
     left: 15vw;
     width: 80vw;
     font-size: 16px;
     text-align: left;
+  }
+  .toro-izquierda,
+  .toro-derecha {
+    display: none !important;
   }
 }
