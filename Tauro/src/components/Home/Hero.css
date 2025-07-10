@@ -51,8 +51,8 @@
   opacity: 0;
   transform: translateY(40px);
   transition:
-    opacity 5s cubic-bezier(.55,0,.1,1),
-    transform 2.5s cubic-bezier(.6, .05, .21, .98);
+    opacity 3s cubic-bezier(.55,0,.1,1),
+    transform 1s cubic-bezier(.6, .05, .21, .98);
 }
 
 /* Toro blanco: AÚN MÁS GRANDE */
@@ -63,11 +63,12 @@
   transform: translateY(40px) translateY(-50%);
 }
 
+/* Solo CAMBIO acá: height 110% para que crezca hacia abajo */
 .toro-derecha {
   top: 0;
   right: 0;
-  height: 100%;
-  max-height: 65vh;
+  height: 125%;       /* <--- Acá el truco, cambia este valor para ajustar */
+  max-height: none;   /* Le sacamos el límite para que el height funcione */
   width: auto;
   max-width: 45vw;
   object-fit: contain;
