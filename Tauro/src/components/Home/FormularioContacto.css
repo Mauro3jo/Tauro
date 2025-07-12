@@ -2,13 +2,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 80px 0 80px 0; /* espacio arriba y abajo */
+  margin: 150px 0 150px 0; /* espacio arriba y abajo */
   padding: 0;
 }
 
 .contacto-form-box {
   position: relative;
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
   border-radius: 40px;
   box-shadow: 0 8px 42px 0 rgba(0,0,0,0.13);
