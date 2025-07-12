@@ -43,8 +43,8 @@
 .quienes-somos-content {
   position: relative;
   z-index: 5;
-  padding: 72px 0 56px 40px; /* AJUSTE: antes era 80px */
-  max-width: 900px;
+  padding: 150px 0 56px 250px; /* AJUSTE: antes era 80px */
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   gap: 0;
