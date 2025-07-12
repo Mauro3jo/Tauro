@@ -43,35 +43,18 @@
 }
 
 /* --- FADE IN UP MUY GRADUAL --- */
-.toro-izquierda,
-.toro-derecha {
+.toro-izquierda {
   position: absolute;
   z-index: 3;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(40px);
+  left: 7vw;
+  top: 30%;
+  width: clamp(120px, 22vw, 400px);
+  transform: translateY(40px) translateY(-50%);
   transition:
     opacity 3s cubic-bezier(.55,0,.1,1),
     transform 1s cubic-bezier(.6, .05, .21, .98);
-}
-
-/* Toro blanco: AÚN MÁS GRANDE */
-.toro-izquierda {
-  left: 7vw;
-  top: 30%;
-  width: clamp(120px, 22vw, 320px);
-  transform: translateY(40px) translateY(-50%);
-}
-
-/* Solo CAMBIO acá: height 110% para que crezca hacia abajo */
-.toro-derecha {
-  top: 0;
-  right: 0;
-  height: 125%;       /* <--- Acá el truco, cambia este valor para ajustar */
-  max-height: none;   /* Le sacamos el límite para que el height funcione */
-  width: auto;
-  max-width: 45vw;
-  object-fit: contain;
 }
 
 /* Cuando aparece: opacidad 0.93 y sube a su lugar */
@@ -80,7 +63,7 @@
   transform: translateY(0);
 }
 
-/* Responsive (Mobile) - Ambos toros SIEMPRE ocultos */
+/* Responsive (Mobile) - Toro SIEMPRE oculto */
 @media (max-width: 768px) {
   .hero {
     height: 50vh;
@@ -97,8 +80,7 @@
     font-size: 16px;
     text-align: left;
   }
-  .toro-izquierda,
-  .toro-derecha {
+  .toro-izquierda {
     display: none !important;
   }
 }
