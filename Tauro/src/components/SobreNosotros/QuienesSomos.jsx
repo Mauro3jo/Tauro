@@ -1,19 +1,15 @@
 import './QuienesSomos.css';
-import motoImg from '../../assets/QuienesSomosSuperiorIzquierda.png';
-import franjaVerde from '../../assets/FranjaVerdeDiagonalQuienesSomos.png';
+import fondoDiagonal from '../../assets/Fondo_rueda_moto_-_sobre_nosotros.png';
 import toroImg from '../../assets/ToroQuienesSomos.png';
 
 function QuienesSomos() {
   return (
     <section className="quienes-somos-section">
       <div className="quienes-somos-bg">
-        {/* Imagen moto */}
-        <img src={motoImg} alt="Moto" className="moto-img" />
-        {/* Franja verde alineada */}
-        <img src={franjaVerde} alt="Franja verde" className="franja-verde" />
-        {/* Toro decorativo */}
+        {/* Imagen de fondo diagonal */}
+        <img src={fondoDiagonal} alt="Fondo diagonal" className="fondo-diagonal-bg" />
+        {/* Toro decorativo, por encima del fondo */}
         <img src={toroImg} alt="Toro Tauro" className="toro-bg" />
-        {/* Contenido de texto */}
         <div className="quienes-somos-content">
           <h2>¿Quiénes somos?</h2>
           <p className="primer-parrafo">

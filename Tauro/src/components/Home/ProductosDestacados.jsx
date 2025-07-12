@@ -5,6 +5,9 @@ import './ProductosDestacados.css';
 import HDMA05 from '../../assets/HDMA05.png';
 import HDMA087 from '../../assets/HDMA087.png';
 import HDMA183 from '../../assets/HDMA183.png';
+import HDMA0011 from '../../assets/HDMA 001-1.png';
+import HDMA040 from '../../assets/HDMA 040.png';
+
 import fondoIzquierda from '../../assets/esquina-izquierda.png';
 import fondoDerecha from '../../assets/esquina-derecha.png';
 
@@ -12,7 +15,10 @@ const productos = [
   { nombre: 'HDMA05', img: HDMA05 },
   { nombre: 'HDMA183', img: HDMA183 },
   { nombre: 'HDMA087', img: HDMA087 },
+  { nombre: 'HDMA0011', img: HDMA0011 },
+  { nombre: 'HDMA040', img: HDMA040 },
 ];
+
 
 function getOrder(center, total) {
   return [
