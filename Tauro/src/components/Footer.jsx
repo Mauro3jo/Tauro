@@ -12,11 +12,11 @@ function Footer() {
           <h4>Información de contacto</h4>
           <div className="footer-item">
             <img src={mail} alt="Mail" />
-            <span>neumasticostaurooficial@gmail.com</span>
+            <span>contacto@cubiertastauro.com</span>
           </div>
           <div className="footer-item">
             <img src={telefono} alt="Teléfono" />
-            <span>+54 386 000 - 0000</span>
+            <span>3854-972776</span>
           </div>
         </div>
 

@@ -13,15 +13,15 @@ function QuienesSomos() {
         <div className="quienes-somos-content">
           <h2>¿Quiénes somos?</h2>
           <p className="primer-parrafo">
-            En <b>Tauro</b>, hacemos que tu moto se sienta <b>más segura</b>
+            En <b>Tauro</b> hacemos que tu moto se sienta <b>más segura</b>
             <br />
             y con <b>mejor agarre</b> en cada kilómetro.
           </p>
           <p>
-            Nos especializamos en seleccionar neumáticos de <b>alta calidad</b> que te den la <b>confianza</b> que necesitás, ya sea para el día a día en la ciudad o para esas escapadas de fin de semana.
+            Nos especializamos en neumáticos de <b>alta calidad</b>, que te brindan la <b>confianza</b> que necesitas, ya sea para el día a día en la ciudad, o para esas escapadas de fin de semana.
           </p>
           <p>
-            Nos encargamos de entender qué tipo de moto tenés y cómo te gusta manejar, para recomendarte el <b>neumático perfecto</b>. Así, cada vez que salgas, sabés que contás con el mejor agarre y una respuesta segura bajo tus ruedas.
+            Nos esforzamos por entender cuál es tu experiencia de manejo anhelada y el tipo de moto que tenés para recomendarte el <b>neumático perfecto</b>. Así, cada vez que salgas a rodar en tu moto, sabés que contás con el mejor agarre y una respuesta segura bajo tus ruedas.
           </p>
         </div>
       </div>
