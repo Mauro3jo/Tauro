@@ -49,7 +49,7 @@ function Navbar() {
           >
             Sobre nosotros
           </Link>
-          <span className="nav-importador">Importado por Nomes tires SRL</span>
+          <span className="nav-importador">Importado por Nome tires SRL</span>
         </nav>
 
       </div>

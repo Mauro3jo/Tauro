@@ -1,7 +1,8 @@
 import './CalidadGarantizada.css';
-// Usá la ruta real de tus imágenes según dónde las tengas en el proyecto
-import isoImg from '../../assets/CertifiedIso.png';
-import eceImg from '../../assets/AprovedACE.png';
+// Cambiá las rutas para que apunten a los SVG
+import isoImg from '../../assets/CertifiedIso.svg';
+import eceImg from '../../assets/AprovedACE.svg';
+import LogoDot from '../../assets/LogoDOT.svg';
 
 function CalidadGarantizada() {
   return (
@@ -10,6 +11,10 @@ function CalidadGarantizada() {
         <div className="cert-card">
           <img src={isoImg} alt="Certificación ISO 9001" />
           <span className="cert-title">Certificación ISO 9001</span>
+        </div>
+        <div className="cert-card">
+          <img src={LogoDot} alt="LogoDot" />
+          <span className="cert-title">Certificación DOT</span>
         </div>
         <div className="cert-card">
           <img src={eceImg} alt="Certificación E-MARK" />

@@ -30,6 +30,7 @@
 .logo {
   height: 60px;
   object-fit: contain;
+  margin-top: 10px; /* ← Espacio para que no toque el tope */
 }
 
 /* === HAMBURGUESA === */

@@ -24,11 +24,11 @@ function Footer() {
           <h4>Nuestras Redes</h4>
           <div className="footer-item">
             <img src={instagram} alt="Instagram" />
-            <span>@NeumaticosTauro</span>
+            <span>@CubiertasTauro</span>
           </div>
           <div className="footer-item">
             <img src={facebook} alt="Facebook" />
-            <span>NeumaticosTauro</span>
+            <span>Cubiertastauro</span>
           </div>
         </div>
       </div>

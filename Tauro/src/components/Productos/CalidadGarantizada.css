@@ -28,8 +28,8 @@
 }
 
 .cert-card img {
-  width: 220px;       /* ¡MUCHO más grande! */
-  height: 220px;
+  width: 125px;       /* ¡MUCHO más grande! */
+  height: 100px;
   object-fit: contain;
   margin-bottom: 18px;
   border: none !important;
