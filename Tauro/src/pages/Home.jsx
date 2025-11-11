@@ -3,7 +3,7 @@ import Hero from '../components/Home/Hero';
 import Beneficios from '../components/Home/Beneficios';
 import ProductosDestacados from '../components/Home/ProductosDestacados';
 import FormularioContacto from '../components/Home/FormularioContacto';
-import toroFurro from '../assets/ToroFurro.png'; // AJUSTÁ LA RUTA si tu estructura es diferente
+import lineasConRueda from '../assets/Lineas_con_rueda.png';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ function Home() {
       {/* TORO FURRO FLOTANTE */}
       {mostrar && (
         <img
-          src={toroFurro}
+          src={lineasConRueda}
           alt="Toro Furro"
           className={`toro-furro-home${animar ? ' fade-in-up' : ''}`}
           draggable="false"
